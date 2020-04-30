@@ -34,7 +34,6 @@ const Navbar = () => {
                         <li key={color}>
                           <Link 
                             to={path} 
-                            className={i === selected ? "selected" : null} 
                             style={{color : i === selected ? color : "#333"}}
                             onClick = {() => setSelected(i)}
                           >
