@@ -1,13 +1,113 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  font-family: Montserrat, sans-serif;
+  overflow: hidden;
+}
+.home,.about,.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+.home .sqr,.contact .circle{
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+  background: rgb(247, 117, 139);
+  border-radius: 1rem;
+}
+.contact .circle{
+  border-radius: 50%;
+  background: rgb(247, 117, 139);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+nav{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav ul li{
+  margin-left: 20px;
+  position: relative;
+  list-style: none;
+}
+
+nav ul li a{
+  color: #333;
+  text-decoration: none;
+  font-size: 2rem;
+  position: relative;
+}
+nav ul li a .underline{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.3rem;
+  background: black;
+  border-radius: 10px;
+}
+
+nav ul li a.selected{
+  font-size: 3rem;
+}
+
+.gellary-container{
+  height: 500px;
+  width: 500px;
+  padding: 0 20px 20px 0;
+  background: #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gellary-container div{
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  margin: 20px 0 0 20px;
+  flex: 1 1 50px;
+  background: red;
+}
+.overlay,.single-gellary-container{
+  position: absolute;
+  background: white;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.single-gellary-container{
+  background:  unset;
+  opacity: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-gallery-item{
+  border-radius: 10px;
+  width: 500px;
+  height: 200px;
 }
